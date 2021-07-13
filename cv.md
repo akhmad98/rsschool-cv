@@ -158,3 +158,8 @@ Currently, I am working in the Project of creating robot and teaching it to spea
 I am a graduator of Management Development Institute of Singapore in Tashkent. The pioneer student of the faculty I am studying is _Computer Science in Business_. In the period of three-year, we received courses from System Administration Management *(Unix, Ubuntu OS)*, Web development *(HTML, CSS, JS)*, Database *(SQL)*. 
 ## English
 The level of my English is at Pre-Intermediate according to the FY certificate suggested by MDIS in Tashkent in the first-year course.
+## Personal Qualities
+* High level of communication skills
+* Leading workers and people 
+* Mindfullness
+* High discipline
