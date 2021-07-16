@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+        <div class="left-content p-30">
+            <div class="logo">
+                <a href="index.html">
+					<span>Akhmad</span>
+					<span>Badalov</span>
+				</a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experience.html">Work Profile</a></li>
+                    <li><a href="https://github.com/akhmad98?tab=repositories">Portfolio</a></li>
+                </ul>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="left-footer">
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/akhmad-badalov-928966211/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.facebook.com/AkhmadBadalov"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="https://t.me/AkhmaDJ"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+						<li><a href="https://github.com/akhmad98"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="foot-content">
+                    <ul>
+                        <li>akhmadbadalov98@gmail.com</li>
+						<li>+998 99 301 97 13</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="section1 p-30" id="Portfolio">
+                <div class="sec-title">
+                    <div class="pg-title">Education</div>
+                </div>
+                <div class="d-flex-align-center">
+                    <div class="user-profile flex-1">
+                        <div class="pro-details">
+                            <div class="sm-text">Programming Languages. Scripting Languages</div>
+                        </div>
+                        <br>
+                        <div class="text">
+                            <ul>
+                                <li><i class="fab fa-python"></i>1. Python</li>
+                                <li><i class="fa fa-js" ></i>2. JavaScript</li>
+                                <li><i class="fab fa-php"></i>3. PHP</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="pro-details">
+                            <div class="sm-text">Frameworks</div>
+                        </div>
+                        <br>
+                        <div class="text">
+                            <ul>
+                                <li>1. Node.js</li>
+                                <li>2. Express.js</li>
+                                <li>3. Vanilla.js</li>
+                                <li>4. CodeIgniter</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="pro-details">
+                            <div class="sm-text">Libraries</div>
+                        </div>
+                        <br>
+                        <div class="text">
+                            <ul>
+                                <li>- D3.js</li>
+                                <li>- JQuery</li>
+                                <li>- Matplotib</li>
+                                <li>- Seaborn</li>
+                                <li>- Pandas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user-profile flex-1">
+                        <div class="pro-details">
+                            <div class="sm-text">Academic</div>
+                        </div>
+                        <br>
+                        <div class="text">Languages</div>
+                        <div id="my_dataviz"></div>
+                        <br>
+                        <div class="pro-details">
+                            <div class="sm-text">Personal Qualities</div>
+                        </div>
+                        <br>
+                        <div class="text">
+                            <ul>
+                                <li>High level of communication skills</li>
+                                <li>Leading workers and people</li>
+                                <li>Mindfullness</li>
+                                <li>High discipline</li>
+                            </ul>
+                        </div> 
+                        <br>
+                        <div class="text">I am a graduator of Management Development Institute of Singapore in Tashkent. The pioneer student of the faculty I am studying is <i>Science in Business</i>. In the period of three-year, we received courses from System Administration Management <b>Unix, Ubuntu OS</b>, Web development (HTML, CSS, JS), Database (SQL).</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+
+    // set the dimensions and margins of the graph
+    var margin = {top: 20, right: 30, bottom: 40, left: 90},
+        width = 460 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    // Parse the Data
+    d3.csv("https://raw.githubusercontent.com/akhmad98/data_analysis/main/languages.csv", function(data) {
+    
+      // Add X axis
+      var x = d3.scaleLinear()
+        .domain([0, 100])
+        .range([ 0, width]);
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+          .attr("transform", "translate(-10,0)rotate(-45)")
+          .style("text-anchor", "end");
+    
+      // Y axis
+      var y = d3.scaleBand()
+        .range([ 0, height ])
+        .domain(data.map(function(d) { return d.Languages; }))
+        .padding(.1);
+      svg.append("g")
+        .call(d3.axisLeft(y))
+    
+      //Bars
+      svg.selectAll("myRect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x", x(0) )
+        .attr("y", function(d) { return y(d.Languages); })
+        .attr("width", function(d) { return x(d.Scale); })
+        .attr("height", y.bandwidth() )
+        .attr("fill", "#69b3a2")
+    
+    
+        // .attr("x", function(d) { return x(d.Country); })
+        // .attr("y", function(d) { return y(d.Value); })
+        // .attr("width", x.bandwidth())
+        // .attr("height", function(d) { return height - y(d.Value); })
+        // .attr("fill", "#69b3a2")
+    
+    })
+    
+    </script>
