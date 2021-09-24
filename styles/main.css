@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 30px; 
+    padding-bottom: 50px;
+    background-color: #fff;
+}
+
+p {
+    margin: 0;
+    line-height: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    margin: 0;
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {  
+    padding: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    min-width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .a-photo {
+    width: 300px;
+    height: 250px;
+}
+
+section, article, footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 3px solid rgb(129, 127, 127);
+}
+
+.author-name {
+    text-decoration: underline;
+}
+ 
+.contact-list li > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-list-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.section-inner-title {
+    margin: 10px 0;
+}
+
+.section-list {
+    margin-left: 20px;
+    list-style-type: square;
+    margin-bottom: 20px;
+}
+
+.section-list > li {
+    font-weight: bold;
+}
+
+.section-list a:hover {
+    text-decoration: underline;
+}
+
+.section-list .section-inner-list {
+    list-style-type: circle;
+    font-weight: normal;
+    font-size: .8rem;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.section-list .ordered-inner-list {
+    list-style-type: decimal;
+    padding: 0;
+}
+
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-right {
+    border: none;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px 50px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .7s ease;
+}
+
+.task-btn {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    background-color: #F9C869;
+    padding: 16px 25px;
+    min-width: 180px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    text-align: center;
+    outline: none;
+    transition: background-color .1s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f7c054;
+    box-shadow: 0 0 10px #F9C869;
+}
+
+.btn:active {
+    background-color: #f3b12d;
+    box-shadow: 0 0 10px #F9C869;
+}
+
+.task-code {
+    font-size: .8rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-git a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(51, 50, 50);
+    transition: all .2s ease;
+}
+
+.my-git a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+}
