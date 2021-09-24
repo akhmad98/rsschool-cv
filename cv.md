@@ -9,17 +9,26 @@ Contact Adresses
 ## Summary
 The main _goal_ of mine is to make a good community with my collegues while learning knowledge and share it to the community, including new learners.
 ## Skills
-### Programming Languages
+### Cloud Service
+* Amazon AWS
+### DevOps tools
+#### Container Management
+* Docker
+#### Version Control tools
+* Github
+* Gitlab
+### Technology
+* MERN
+#### Programming Languages
 * Python
-### Scripting Languages
-* JavaScript
+#### Scripting Languages
+* JavaScript (TypeScript)
 * PHP
-### Frameworks
-* Node.js
+#### Frameworks
 * Express.js
 * VanillaJs
-* CodeIgniter
-#### Libraries
+* NestJS
+##### Libraries
 * D3.js
 * JQuery
 * Matplotlib
@@ -61,91 +70,7 @@ def insert(self, d):
   else:
           self.right = Node(d)
   return True
-  
-import requests
-import csv
-import pandas as pd
-from bs4 import BeautifulSoup
-
-URL = 'https://kun.uz/news/list?f=latest&next=1620051453'
-HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0', 'accept': '*/*'}
-
-
-def get_html_page(url, params=None):
-    page = requests.get(url, headers=HEADERS, params=params)
-    return page
-def get_content(html, linkclass, headclass, contentclass):
-    soup = BeautifulSoup(html.text, 'html.parser')
-    latest_news = soup.find_all('a', class_=linkclass)
-    arr = []
-    arr_p = []
-    arr_heading = []
-    for item in latest_news:
-        item_url = item.get("href")
-        url = 'https://kun.uz'+ item_url
-        linked_page = requests.get(url)
-        soup_inn = BeautifulSoup(linked_page.text, 'html.parser')
-        each_heading = soup_inn.find(class_=headclass)
-        each_heading_text = each_heading.text
-        all_p = soup_inn.find(class_=contentclass).find_all('p')
-        arr.append(url)
-        arr_heading.append(each_heading_text)
-        content = ''
-        for item_p in all_p:
-            content += item_p.text
-        arr_p.append(content)
-    dict = {'Link' : arr, 'Headings' : arr_heading, 'Paragraphs': arr_p}
-    df = pd.DataFrame(dict)
-    df.to_csv('latest_news.csv')
-    # return dict
-
-def parse(linkclass, headclass, contentclass):
-    html = get_html_page(URL)
-    if html.status_code == 200:
-        get_content(html, linkclass, headclass, contentclass)
-    else:
-        print('Error')
-
-
-parse('daily-block', 'single-header__title', 'single-content')
-```{python}
-
-```{javascript}
-const express = require('express')
-const path = require('path')
-const exphbs = require('express-handlebars')
-const logger = require('./middleware/logger')
-const products = require('./Members')
-
-const app = express();
-
-//init middleware
-// app.use(logger)
-
-//Hnadlebars middlewar
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
-app.set('view engine', 'handlebars')
-
-// Body parser Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }))
-
-//HOme page Route
-app.get('/', (req, res) => res.render('index', {
-    title: 'Member App',
-    products
-}))
-
-//Set static folder either static or handlebars should be used not both
-app.use(express.static(path.join(__dirname, 'public')))
-
-//Products API Routes
-app.use('/api/products', require('./routes/api/products'))
-
-const PORT = process.env.PORT || 4000
-
-app.listen(PORT, () => console.log(`Server is running`))
-```{javascript}
+```  
 ## Experience
 Currently, I am working in the Project of creating robot and teaching it to speak in my native languae (Uzbek). The project is at the middle.
 1. NLP in AI and the Realization of Futuristic Robots in Uzbek
