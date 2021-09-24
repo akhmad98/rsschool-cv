@@ -6,137 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akhmad Badalov's Resume</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/all.css">
     <script src="https://d3js.org/d3.v4.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="info">
-                <h1 class="author-name">Akhmad Badalov</h1>
-                <h3>Software Enginner</h3>  
-            </div>
-            <div class="a-photo">
-                <img width="300" height="250" src="images/img.jpg" alt="Personal Photo">
+        <header class="header">
+            <div class="wrapper">
+                <div class="header_wrapper">
+                    <div class="header_left">
+    
+                    </div>
+                    <nav class="header_nav">
+                        <ul class="header_list">
+                            <li class="header_item">Skills</li>
+                            <li class="header_item">Education</li>
+                            <li class="header_item">Portfolio</li>
+                            <li class="header_item">Contacts</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
+
+
         <main>
-            <section class="contact-info">
-                <h2>Contacts</h2>
-                <ul class="contact-list">
-                    <li>
-                        <span class="contact-list-title">Address: </span> Denov, Ihtiyor street 9
-                    </li>
-                    <li>
-                        <span class="contact-list-title">Mobile: </span><a href="tel:+998993019713">993019713</a>
-                    </li>
-                    <li>
-                        <span class="contact-list-title">LinkedIn: </span><a href="https://www.linkedin.com/in/akhmad-badalov-928966211/">https://www.linkedin.com/in/akhmad-badalov-928966211/</a>
-                    </li>
-                    <li>
-                        <span class="contact-list-title">Facebook: </span><a href="https://www.facebook.com/AkhmadBadalov">https://www.facebook.com/AkhmadBadalov</a>
-                    </li>
-                    <li><span class="contact-list-title">Email: </span><a href="mailto:phillipjohnson7889@mail.ru">phillipjohnson7889@mail.ru</a></li>
-                </ul>
-            </section>
-            <article>
-                <h2>Profile Statement (Main)</h2>
-                <p>Fully motivated, entertained in job, eager to learn</p>
-            </article>
-            <section>
-                <h2>Education</h2>
-                <h3 class="section-inner-title">Management Development Institute of Singapore in Tashkent</h3>
-                <ul class="section-list">
-                    <li>Bachelor's degree in Computer Information Systems for Business</li>
-                </ul>
-                <h3 class="section-inner-title">Additional online and other courses</h3>
-                <ul class="section-list">
-                    <li>freeCodeCamp
-                        <ul class="section-inner-list">
-                            <li><a href="https://www.freecodecamp.org/certification/fcc4a47156e-cbed-4d1a-82c4-d1299d168b66/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer"></a> JavaScript Algorithms and Data Structure</li>
-                        </ul>
-                    </li>
-                    <li>Codecademy
-                        <ul class="section-inner-list">
-                            <li><a href="https://www.codecademy.com/profiles/akhmadBadalov6268984115/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" rel="noopener noreferrer"></a> Learn JavaScript Course</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Skills</h2>
-                <ul class="section-list">
-                    <li>Language Knowledge
-                        <div id="my_dataviz"></div>
-                    </li>
-                    <li>Programing and Scripting Languages
-                        <ol class="section-inner-list ordered-inner-list">
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>JS</li>
-                        </ol>
-                    </li>
-                    <li>Libraries and Frameworks
-                        <ol class="section-inner-list ordered-inner-list">
-                            <li>Node.js</li>
-                            <li>NestJs</li>
-                            <li>ExpressJs</li>
-                            <li>Vanillajs</li>
-                            <li>Matplotlib</li>
-                            <li>CodeIgniter</li>
-                            <li>Pandas</li>
-                            <li>BS4</li>
-                            <li>JQuery</li>
-                        </ol>
-                    </li>
-                    <li> DevOps tools
-                        <ul class="section-inner-list">
-                            <li>Docker</li>
-                            <li>Gitlab</li>
-                            <li>Github</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Code example</h2>
-
-                <div class="task">
-                    <div class="task-left">
-                        <div class="task-title">
-                            <h4>Task:</h4> 
-                            <p>Implement function that reverse digits of this number</p>      
-                        </div>
-                        <div class="task-btn">
-                            <a href="#" class="btn" id="show-btn">Show code!</a>
-                        </div>
+            <section class="intro">
+                <div class="wrapper">
+                    <div class="info">
+                        <h1 class="author-name">Akhmad Badalov</h1>
+                        <h3>Software Enginner</h3>  
                     </div>
-
-                    <div class="task-right">
-                        <code class="task-code">
-                            def get_html_page(url, params=None):<br>
-                                page = requests.get(url, headers=HEADERS, params=params) <br>
-                                return page
-                        </code>
+                    <div class="a-photo">
+                        <img width="300" height="250" src="images/img.jpg" alt="Personal Photo">
                     </div>
-                </div>  
+                </div>
             </section>
-            <footer>
-                <div class="my-git">
-                    <a href="https://github.com/Akphillips" target="_blank"><i class="fab fa-github"></i> My Github</a>
-                </div>
-
-                <div class="footer-year">2021</div>
-
-                <div class="footer-logo">
-                    <a href="https://rs.school/js/" target="_blank">
-                        <img src="images/logo.svg" alt="logo" width="200">
-                    </a>
-                </div>
-            </footer>
         </main>
-    </div>
+        <!-- <div class="container">
+            <header class="header">
+                <div class="info">
+                    <h1 class="author-name">Akhmad Badalov</h1>
+                    <h3>Software Enginner</h3>  
+                </div>
+                <div class="a-photo">
+                    <img width="300" height="250" src="images/img.jpg" alt="Personal Photo">
+                </div>
+            </header> -->
+                <section class="contact-info">
+                    <h2>Contacts</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-list-title">Address: </span> Denov, Ihtiyor street 9
+                        </li>
+                        <li>
+                            <span class="contact-list-title">Mobile: </span><a href="tel:+998993019713">993019713</a>
+                        </li>
+                        <li>
+                            <span class="contact-list-title">LinkedIn: </span><a href="https://www.linkedin.com/in/akhmad-badalov-928966211/">https://www.linkedin.com/in/akhmad-badalov-928966211/</a>
+                        </li>
+                        <li>
+                            <span class="contact-list-title">Facebook: </span><a href="https://www.facebook.com/AkhmadBadalov">https://www.facebook.com/AkhmadBadalov</a>
+                        </li>
+                        <li><span class="contact-list-title">Email: </span><a href="mailto:phillipjohnson7889@mail.ru">phillipjohnson7889@mail.ru</a></li>
+                    </ul>
+                </section>
+                <article>
+                    <h2>Profile Statement (Main)</h2>
+                    <p>Fully motivated, entertained in job, eager to learn</p>
+                </article>
+                <section>
+                    <h2>Education</h2>
+                    <h3 class="section-inner-title">Management Development Institute of Singapore in Tashkent</h3>
+                    <ul class="section-list">
+                        <li>Bachelor's degree in Computer Information Systems for Business</li>
+                    </ul>
+                    <h3 class="section-inner-title">Additional online and other courses</h3>
+                    <ul class="section-list">
+                        <li>freeCodeCamp
+                            <ul class="section-inner-list">
+                                <li><a href="https://www.freecodecamp.org/certification/fcc4a47156e-cbed-4d1a-82c4-d1299d168b66/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer"></a> JavaScript Algorithms and Data Structure</li>
+                            </ul>
+                        </li>
+                        <li>Codecademy
+                            <ul class="section-inner-list">
+                                <li><a href="https://www.codecademy.com/profiles/akhmadBadalov6268984115/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" rel="noopener noreferrer"></a> Learn JavaScript Course</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Skills</h2>
+                    <ul class="section-list">
+                        <li>Language Knowledge
+                            <div id="my_dataviz"></div>
+                        </li>
+                        <li>Programing and Scripting Languages
+                            <ol class="section-inner-list ordered-inner-list">
+                                <li>Python</li>
+                                <li>PHP</li>
+                                <li>JS</li>
+                            </ol>
+                        </li>
+                        <li>Libraries and Frameworks
+                            <ol class="section-inner-list ordered-inner-list">
+                                <li>Node.js</li>
+                                <li>NestJs</li>
+                                <li>ExpressJs</li>
+                                <li>Vanillajs</li>
+                                <li>Matplotlib</li>
+                                <li>CodeIgniter</li>
+                                <li>Pandas</li>
+                                <li>BS4</li>
+                                <li>JQuery</li>
+                            </ol>
+                        </li>
+                        <li> DevOps tools
+                            <ul class="section-inner-list">
+                                <li>Docker</li>
+                                <li>Gitlab</li>
+                                <li>Github</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Code example</h2>
+
+                    <div class="task">
+                        <div class="task-left">
+                            <div class="task-title">
+                                <h4>Task:</h4> 
+                                <p>Implement function that reverse digits of this number</p>      
+                            </div>
+                            <div class="task-btn">
+                                <a href="#" class="btn" id="show-btn">Show code!</a>
+                            </div>
+                        </div>
+
+                        <div class="task-right">
+                            <code class="task-code">
+                                def get_html_page(url, params=None):<br>
+                                    page = requests.get(url, headers=HEADERS, params=params) <br>
+                                    return page
+                            </code>
+                        </div>
+                    </div>  
+                </section>
+                <footer>
+                    <div class="my-git">
+                        <a href="https://github.com/Akphillips" target="_blank"><i class="fab fa-github"></i> My Github</a>
+                    </div>
+
+                    <div class="footer-year">2021</div>
+
+                    <div class="footer-logo">
+                        <a href="https://rs.school/js/" target="_blank">
+                            <img src="images/logo.svg" alt="logo" width="200">
+                        </a>
+                    </div>
+                </footer>
+            </main>
+
+        </div>
     <script src='scripts/main.js'></script>
     <script src='scripts/d3graph.js'></script>
 </body>
