@@ -1,0 +1,340 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhmad Badalov's Resume</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                    <nav class="header_nav">
+                        <div class="personal">
+                            <div class="img">
+                                <img height="150" width="150" src="images/img.jpg" alt="Personal Photo">
+                            </div>
+                            <h1 class="author-name">Akhmad Badalov</h1>
+                        </div>
+                        <ul class="header_list">Contacts
+                            <li class="header_item">Skills</li>
+                            <li class="header_item">Education</li>
+                            <li class="header_item">Portfolio</li>
+                            <li class="header_item">Contacts</li>
+                        </ul>
+                    </nav>
+            </header>
+
+
+            <main>
+            <section class="intro">
+                <div class="wrapper">
+                    <div class="info">
+                        <h3>Software Enginner</h3>  
+                    </div>
+                    <div class="a-photo">
+                    </div>
+                </div>
+            </section>
+            </main>
+                <section class="contact-info">
+                    <h2>Contacts</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-list-title">Address: </span> Denov, Ihtiyor street 9
+                        </li>
+                        <li>
+                            <span class="contact-list-title">Mobile: </span><a href="tel:+998993019713">993019713</a>
+                        </li>
+                        <li>
+                            <span class="contact-list-title">LinkedIn: </span><a href="https://www.linkedin.com/in/akhmad-badalov-928966211/">https://www.linkedin.com/in/akhmad-badalov-928966211/</a>
+                        </li>
+                        <li>
+                            <span class="contact-list-title">Facebook: </span><a href="https://www.facebook.com/AkhmadBadalov">https://www.facebook.com/AkhmadBadalov</a>
+                        </li>
+                        <li><span class="contact-list-title">Email: </span><a href="mailto:phillipjohnson7889@mail.ru">phillipjohnson7889@mail.ru</a></li>
+                    </ul>
+                </section>
+                <article>
+                    <h2>Profile Statement (Main)</h2>
+                    <p>Fully motivated, entertained in job, eager to learn</p>
+                </article>
+                <section>
+                    <h2>Education</h2>
+                    <h3 class="section-inner-title">Management Development Institute of Singapore in Tashkent</h3>
+                    <ul class="section-list">
+                        <li>Bachelor's degree in Computer Information Systems for Business</li>
+                    </ul>
+                    <h3 class="section-inner-title">Additional online and other courses</h3>
+                    <ul class="section-list">
+                        <li>freeCodeCamp
+                            <ul class="section-inner-list">
+                                <li><a href="https://www.freecodecamp.org/certification/fcc4a47156e-cbed-4d1a-82c4-d1299d168b66/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer"></a> JavaScript Algorithms and Data Structure</li>
+                            </ul>
+                        </li>
+                        <li>Codecademy
+                            <ul class="section-inner-list">
+                                <li><a href="https://www.codecademy.com/profiles/akhmadBadalov6268984115/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" rel="noopener noreferrer"></a> Learn JavaScript Course</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Skills</h2>
+                    <ul class="section-list">
+                        <li>Language Knowledge
+                            <div id="my_dataviz"></div>
+                        </li>
+                        <li>Programing and Scripting Languages
+                            <ol class="section-inner-list ordered-inner-list">
+                                <li>Python</li>
+                                <li>PHP</li>
+                                <li>JS</li>
+                            </ol>
+                        </li>
+                        <li>Libraries and Frameworks
+                            <ol class="section-inner-list ordered-inner-list">
+                                <li>Node.js</li>
+                                <li>NestJs</li>
+                                <li>ExpressJs</li>
+                                <li>Vanillajs</li>
+                                <li>Matplotlib</li>
+                                <li>CodeIgniter</li>
+                                <li>Pandas</li>
+                                <li>BS4</li>
+                                <li>JQuery</li>
+                            </ol>
+                        </li>
+                        <li> DevOps tools
+                            <ul class="section-inner-list">
+                                <li>Docker</li>
+                                <li>Gitlab</li>
+                                <li>Github</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Code example</h2>
+
+                    <div class="task">
+                        <div class="task-left">
+                            <div class="task-title">
+                                <h4>Task:</h4> 
+                                <p>Implement function that reverse digits of this number</p>      
+                            </div>
+                            <div class="task-btn">
+                                <a href="#" class="btn" id="show-btn">Show code!</a>
+                            </div>
+                        </div>
+
+                        <div class="task-right">
+                            <code class="task-code">
+                                def get_html_page(url, params=None):<br>
+                                    page = requests.get(url, headers=HEADERS, params=params) <br>
+                                    return page
+                            </code>
+                        </div>
+                    </div>  
+                </section>
+                <footer>
+                    <div class="my-git">
+                        <a href="https://github.com/Akphillips" target="_blank"><i class="fab fa-github"></i> My Github</a>
+                    </div>
+
+                    <div class="footer-year">2021</div>
+
+                    <div class="footer-logo">
+                        <a href="https://rs.school/js/" target="_blank">
+                            <img src="images/logo.svg" alt="logo" width="200">
+                        </a>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src='scripts/main.js'></script>
+    <script src='scripts/d3graph.js'></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/79a0fbe733.js" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left_Side">
+            <header class="header">
+                <nav class="header_nav">
+                    <div class="personal">
+                        <div class="img">
+                            <img height="200" width="200" src="images/img.jpg" alt="Personal Photo">
+                        </div>
+                        <div class="name">
+                            <h1 class="author-name" style="font-weight: bold;"> Akhmad</h1>
+                            <h1 class="author-name">Badalov</h1>
+                        </div>
+                        <div class="date">
+                            <h4>DATE OF BIRTH:</h4>
+                            <p>05/07/1998</p>
+                        </div>
+                    </div>
+                    <ul class="header_list">Contacts
+                        <li class="header_item"><b style="font-weight: 800;">Nationality:</b> Uzbek</li>
+                        <li class="header_item"><strong style="font-weight: 800;">Gender:</strong> Male</li>
+                        <li class="header_item map">Tashkent, Uch-tepa, 26-kv ,
+                            190501 Tashkent, Uzbekistan</li>
+                        <li class="header_item" id="mailto"><a href="mailto:akhmadbadalov98@gmail.co
+                            m">akhmadbadalov98@gmail.com</a> </li>
+                        <li class="header_item phone"> (+998) 993019713</li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="right_Side">
+            <main>
+                <section class="experience">
+                    <h1 class="experience_head">WORK EXPERIENCE</h1>
+                    <div class="experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: 800;">11/05/2017 – 20/05/2021</b> – Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="experience_position">
+                            <h3>Marketing assistant</h3>
+                        </div>
+                        <div class="experience_place">
+                            <h5>QK OOO Tashkentsky Truba Zavodi</h5>
+                        </div>
+                        <div class="experience_info">
+                            <p class="experince_details">As an assistant, I was in charge of keeping contacts with external
+                                distributors and product-flow a analysing</p>
+                        </div>
+                    </div>
+                    <div class="experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: 800;">22/06/2021 – 22/08/2021</b> – Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="experience_position">
+                            <h3>Software developer, Data Collector</h3>
+                        </div>
+                        <div class="experience_place">
+                            <h5>Joint Venture PRIME MEDIA SOLUTION Ltd​</h5>
+                        </div>
+                        <div class="experience_info">
+                            <p class="experince_details">The task of mine in this company is to develop the software products
+                                outsourced by this company, monitor it and manage issues evolved.
+                                Currently, i am working on the enhance the software to the
+                                requirements from the company outsourced to us.</p>
+                        </div>
+                    </div>
+                    <div class="experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: bold;">23/09/2021 – CURRENT</b> – Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="experience_position">
+                            <h3>Software developer</h3>
+                        </div>
+                        <div class="experience_place">
+                            <h5>TTS.uz</h5>
+                        </div>
+                        <div class="experience_info">
+                            <p class="experince_details exp_add">Data collecting by Web scraping and creating sofware to filter data from
+                                spelling and grammer errors. Creating bunch of libraries in Uzbek
+                                language and create a robot which talks in Uzbek language.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="education">
+                    <h1 class="education_head">EDUCATION AND TRAINING</h1>
+                    <div class="education_cards experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: bold;">20/10/2017 – 19/05/2021</b> – Tashkent, Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="education_entity">
+                            <h3>Bachelors in Computer Information Systems for Business</h3>
+                        </div>
+                        <div class="education_place">
+                            <h5>Management Development Institue of Singapore</h5>
+                        </div>
+                        <div class="education_site">
+                            <a href="http://mdis.uz">mdis.uz</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="language">
+                    <h1 class="language_head">LANGUAGE SKILLS</h1>
+                    <div class="mother">
+                        <h1><span class="tongue">MOTHER TONGUE(S):</span> Uzbek</h1>
+                    </div>
+                    <div class="mother other">
+                        <h1><span class="tongue">OTHER LANGUAGE(S):</span></h1>
+                        <div class="otherone">
+                            <h3 style="font-weight: bold;">English</h3>
+                            <table class="english">
+                                <tr class="vars">
+                                    <th>Listening</th>
+                                    <th>Reading</th>
+                                    <th>Spoken production</th>
+                                    <th>Spoken interaction</th>
+                                    <th>Writing</th>
+                                </tr>
+                                <tr class="value">
+                                    <th>C1</th>
+                                    <th>C1</th>
+                                    <th>C1</th>
+                                    <th>C1</th>
+                                    <th>B2</th>
+                                </tr>
+                            </table>
+                            <hr>
+                            <h3 style="font-weight: bold;">Russian</h3>
+                            <table class="english">
+                                <tr class="vars">
+                                    <th>Listening</th>
+                                    <th>Reading</th>
+                                    <th>Spoken production</th>
+                                    <th>Spoken interaction</th>
+                                    <th>Writing</th>
+                                </tr>
+                                <tr class="value">
+                                    <th>B1</th>
+                                    <th>B1</th>
+                                    <th>B1</th>
+                                    <th>B1</th>
+                                    <th>A2</th>
+                                </tr>
+                            </table>
+                            <hr>
+                        </div>
+                    </div>
+                </section>
+                <section class="digital">
+                    <h2 class="digital_head">DIGITAL SKILLS</h2>
+                    <p>Version Control - GitGitHub / Scripting Languages: Javascript, Python /
+                        http-client Postman / Apache HTTP Server; / HTTP Server / Web
+                        architecture / Design Tools / FIgma / MongoDB, MySQL / Database
+                        development / Web Development (Front End) (HTML, CSS, JavaScript) /
+                        Backend: NodeJS, Express, socket.io / Docker Container / Docker products
+                        / GItLab</p>
+                        <div id="my_dataviz"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/79a0fbe733.js" crossorigin="anonymous"></script>
+    <script src='scripts/d3graph.js'></script>
+</body>
+</html>
