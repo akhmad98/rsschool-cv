@@ -535,8 +535,8 @@ h1.author-name {
     font-size: 12px;
     position: absolute;
     font-family: 'FontAwesome';
-    top: 18;
-    left: -30;
+    top: 18px;
+    left: -30px;
     /* bottom: 20px; */
     content: '\f111';
 }
@@ -572,8 +572,8 @@ h1.author-name {
     font-size: 12px;
     position: absolute;
     font-family: 'FontAwesome';
-    top: 11;
-    left: -30;
+    top: 11px;
+    left: -30px;
     /* bottom: 20px; */
     content: '\f111';
 }
