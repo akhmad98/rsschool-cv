@@ -386,37 +386,212 @@ textarea {
        url('../fonts/lato-v17-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 html {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 *, *::before, *::after {
     box-sizing: inherit;
-} 
+}
 body {
-    font-family: 'Lato';
-    font-style: normal;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: normal;
-    color: #102746;
-    background-color: #666666
+    background: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #F7F7F7;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+} 
+.container .left_Side {
+    position: relative;
+    background: #CFCFCF;
+    padding: 40px;
+    grid-column: span 1;
 }
-.header {
-    margin: 10px 0 10px 0;
+.container .right_Side {
+    position: relative;
+    background: #FAFAFA;
+    padding: 40px;
+    grid-column: span 2;
 }
-.header_wrapper {
-    display: flex;
-    flex-wrap: wrap;
+.personal {
+    display: block;
+    text-align: center;
 }
-.header_left {
-    width: 40%;
-    background-color: green;
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #666666;
+    display: inline-block;
+    border: 3px solid #E6E6E6;
 }
-.header_nav {
-    background-color: yellow;
-    width: 60%;
+.personal > * {
+    margin-bottom: 30px;
+}
+h1.author-name {
+    font-size: 26px;
+    /* font-weight: bold; */
+}
+.date > h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(68, 108, 179, 1);
+    line-height: 21px;
+}
+.date > p {
+    font-weight: 600;
+    line-height: 21px;
+}
+.header_list {
+    margin-bottom: 24px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.header_list > li:first-child {
+    margin-top: 20px;
+}
+.header_item {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 22px;
+    padding-left: 16px
+}
+.header_item > a {
+    color: black
+}
+.map {
+    padding-left: 22px;
+    position: relative;
+}
+.map:before {
+    color: rgba(68, 108, 179, 1);
+    font-size: 24px;
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    left: -10px;
+    content: '\f3c5'
+}
+#mailto {
+    padding-left: 22px;
+    position: relative;
+}
+#mailto:before {
+    color:rgba(68, 108, 179, 1);
+    font-size: 24x;
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    left: -10px;
+    content: '\f0e0'
+}
+.phone {
+    padding-left: 22px;
+    position: relative;
+}
+.phone:before {
+    color: rgba(68, 108, 179, 1);
+    font-size: 24px;
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    left: -10px;
+    content: '\f879'
+}
+.experience_head, .education_head, .language_head, .digital_head {
+    font-size: 34px;
+    margin-top: 25px;
+    margin-bottom: 15px;;
+}
+.experience_cards > * {
+    margin-right: 15px;
+    padding-bottom:  5px;
+    margin-left: 25px;
+    padding: 2px;
+}
+
+.experience_period {
+    color: rgba(68, 108, 179, 1);
+}
+.experience_position {
+    position: relative;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 2;
+}
+.experience_position:before {
+    color:rgba(68, 108, 179, 1);
+    font-size: 12px;
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 18;
+    left: -30;
+    /* bottom: 20px; */
+    content: '\f111';
+}
+.experience_cards {
+    position: relative;
+}
+.experience_cards:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(68, 108, 179, 1);
+    width: 3px;
+    height: 100%;
+    bottom: 0;
+}
+.experience_place > h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.experince_details {
+    padding-bottom: 25px;
+}
+.exp_add {
+    padding-bottom: 8px;
+}
+.education_entity {
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2;
+}
+.education_entity:before {
+    color:rgba(68, 108, 179, 1);
+    font-size: 12px;
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 11;
+    left: -30;
+    /* bottom: 20px; */
+    content: '\f111';
+}
+.education_site > a {
+    color: rgba(68, 108, 179, 1);
+}
+.mother {
+    line-height: 35px;;
+    font-size: 20px;
+}
+.tongue {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.vars {
+    font-weight: 800;
+    font-size: 20px;
+}
+.vars > * {
+    padding: 10px
 }

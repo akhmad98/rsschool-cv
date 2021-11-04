@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,49 +9,37 @@
     <script src="https://d3js.org/d3.v4.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="wrapper">
-                <div class="header_wrapper">
-                    <div class="header_left">
-    
-                    </div>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
                     <nav class="header_nav">
-                        <ul class="header_list">
+                        <div class="personal">
+                            <div class="img">
+                                <img height="150" width="150" src="images/img.jpg" alt="Personal Photo">
+                            </div>
+                            <h1 class="author-name">Akhmad Badalov</h1>
+                        </div>
+                        <ul class="header_list">Contacts
                             <li class="header_item">Skills</li>
                             <li class="header_item">Education</li>
                             <li class="header_item">Portfolio</li>
                             <li class="header_item">Contacts</li>
                         </ul>
                     </nav>
-                </div>
-            </div>
-        </header>
+            </header>
 
 
-        <main>
+            <main>
             <section class="intro">
                 <div class="wrapper">
                     <div class="info">
-                        <h1 class="author-name">Akhmad Badalov</h1>
                         <h3>Software Enginner</h3>  
                     </div>
                     <div class="a-photo">
-                        <img width="300" height="250" src="images/img.jpg" alt="Personal Photo">
                     </div>
                 </div>
             </section>
-        </main>
-        <!-- <div class="container">
-            <header class="header">
-                <div class="info">
-                    <h1 class="author-name">Akhmad Badalov</h1>
-                    <h3>Software Enginner</h3>  
-                </div>
-                <div class="a-photo">
-                    <img width="300" height="250" src="images/img.jpg" alt="Personal Photo">
-                </div>
-            </header> -->
+            </main>
                 <section class="contact-info">
                     <h2>Contacts</h2>
                     <ul class="contact-list">
@@ -166,9 +154,187 @@
                     </div>
                 </footer>
             </main>
-
         </div>
+    </div>
     <script src='scripts/main.js'></script>
+    <script src='scripts/d3graph.js'></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/79a0fbe733.js" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left_Side">
+            <header class="header">
+                <nav class="header_nav">
+                    <div class="personal">
+                        <div class="img">
+                            <img height="200" width="200" src="images/img.jpg" alt="Personal Photo">
+                        </div>
+                        <div class="name">
+                            <h1 class="author-name" style="font-weight: bold;"> Akhmad</h1>
+                            <h1 class="author-name">Badalov</h1>
+                        </div>
+                        <div class="date">
+                            <h4>DATE OF BIRTH:</h4>
+                            <p>05/07/1998</p>
+                        </div>
+                    </div>
+                    <ul class="header_list">Contacts
+                        <li class="header_item"><b style="font-weight: 800;">Nationality:</b> Uzbek</li>
+                        <li class="header_item"><strong style="font-weight: 800;">Gender:</strong> Male</li>
+                        <li class="header_item map">Tashkent, Uch-tepa, 26-kv ,
+                            190501 Tashkent, Uzbekistan</li>
+                        <li class="header_item" id="mailto"><a href="mailto:akhmadbadalov98@gmail.co
+                            m">akhmadbadalov98@gmail.com</a> </li>
+                        <li class="header_item phone"> (+998) 993019713</li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="right_Side">
+            <main>
+                <section class="experience">
+                    <h1 class="experience_head">WORK EXPERIENCE</h1>
+                    <div class="experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: 800;">11/05/2017 – 20/05/2021</b> – Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="experience_position">
+                            <h3>Marketing assistant</h3>
+                        </div>
+                        <div class="experience_place">
+                            <h5>QK OOO Tashkentsky Truba Zavodi</h5>
+                        </div>
+                        <div class="experience_info">
+                            <p class="experince_details">As an assistant, I was in charge of keeping contacts with external
+                                distributors and product-flow a analysing</p>
+                        </div>
+                    </div>
+                    <div class="experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: 800;">22/06/2021 – 22/08/2021</b> – Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="experience_position">
+                            <h3>Software developer, Data Collector</h3>
+                        </div>
+                        <div class="experience_place">
+                            <h5>Joint Venture PRIME MEDIA SOLUTION Ltd​</h5>
+                        </div>
+                        <div class="experience_info">
+                            <p class="experince_details">The task of mine in this company is to develop the software products
+                                outsourced by this company, monitor it and manage issues evolved.
+                                Currently, i am working on the enhance the software to the
+                                requirements from the company outsourced to us.</p>
+                        </div>
+                    </div>
+                    <div class="experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: bold;">23/09/2021 – CURRENT</b> – Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="experience_position">
+                            <h3>Software developer</h3>
+                        </div>
+                        <div class="experience_place">
+                            <h5>TTS.uz</h5>
+                        </div>
+                        <div class="experience_info">
+                            <p class="experince_details exp_add">Data collecting by Web scraping and creating sofware to filter data from
+                                spelling and grammer errors. Creating bunch of libraries in Uzbek
+                                language and create a robot which talks in Uzbek language.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="education">
+                    <h1 class="education_head">EDUCATION AND TRAINING</h1>
+                    <div class="education_cards experience_cards">
+                        <div class="experience_period">
+                            <p><b style="font-weight: bold;">20/10/2017 – 19/05/2021</b> – Tashkent, Tashkent, Uzbekistan</p>
+                        </div>
+                        <div class="education_entity">
+                            <h3>Bachelors in Computer Information Systems for Business</h3>
+                        </div>
+                        <div class="education_place">
+                            <h5>Management Development Institue of Singapore</h5>
+                        </div>
+                        <div class="education_site">
+                            <a href="http://mdis.uz">mdis.uz</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="language">
+                    <h1 class="language_head">LANGUAGE SKILLS</h1>
+                    <div class="mother">
+                        <h1><span class="tongue">MOTHER TONGUE(S):</span> Uzbek</h1>
+                    </div>
+                    <div class="mother other">
+                        <h1><span class="tongue">OTHER LANGUAGE(S):</span></h1>
+                        <div class="otherone">
+                            <h3 style="font-weight: bold;">English</h3>
+                            <table class="english">
+                                <tr class="vars">
+                                    <th>Listening</th>
+                                    <th>Reading</th>
+                                    <th>Spoken production</th>
+                                    <th>Spoken interaction</th>
+                                    <th>Writing</th>
+                                </tr>
+                                <tr class="value">
+                                    <th>C1</th>
+                                    <th>C1</th>
+                                    <th>C1</th>
+                                    <th>C1</th>
+                                    <th>B2</th>
+                                </tr>
+                            </table>
+                            <hr>
+                            <h3 style="font-weight: bold;">Russian</h3>
+                            <table class="english">
+                                <tr class="vars">
+                                    <th>Listening</th>
+                                    <th>Reading</th>
+                                    <th>Spoken production</th>
+                                    <th>Spoken interaction</th>
+                                    <th>Writing</th>
+                                </tr>
+                                <tr class="value">
+                                    <th>B1</th>
+                                    <th>B1</th>
+                                    <th>B1</th>
+                                    <th>B1</th>
+                                    <th>A2</th>
+                                </tr>
+                            </table>
+                            <hr>
+                        </div>
+                    </div>
+                </section>
+                <section class="digital">
+                    <h2 class="digital_head">DIGITAL SKILLS</h2>
+                    <p>Version Control - GitGitHub / Scripting Languages: Javascript, Python /
+                        http-client Postman / Apache HTTP Server; / HTTP Server / Web
+                        architecture / Design Tools / FIgma / MongoDB, MySQL / Database
+                        development / Web Development (Front End) (HTML, CSS, JavaScript) /
+                        Backend: NodeJS, Express, socket.io / Docker Container / Docker products
+                        / GItLab</p>
+                        <div id="my_dataviz"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/79a0fbe733.js" crossorigin="anonymous"></script>
     <script src='scripts/d3graph.js'></script>
 </body>
 </html>
