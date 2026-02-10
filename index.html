@@ -112,21 +112,39 @@
                             <img src="./svg/typescript.svg" alt="TypeScript logo">
                             TypeScript
                         </h3>
-                        <p>Basic Typescript declaration variable</p>
-                        <pre><code>
-                        const arr: Array&lt;string&gt; = ['', 'a', 's'];
-                        </code></pre>
+                        <p>Returns true if there is a cycle in the linked list. Otherwise, return false.</p>
+                        <pre><code>function hasCycle(head: ListNode | null): boolean {
+    if (!head || !head.next) {
+        return false
+    }
+
+    let tort: ListNode | null = head;
+    let rabb: ListNode | null = head.next;
+    while (tort && rabb && rabb.next) {
+        if (tort == rabb) {
+            return true
+        }
+        tort = tort.next;
+        rabb = rabb.next.next;
+    }
+    return false
+};</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
                             <img src="./svg/javascript.svg" alt="JavaScript logo">
                             JavaScript
                         </h3>
-                        <p>Callback function</p>
-                        <pre><code>
-                        const greet = (callit) => callit();<br>
-                        function callit() { console.log('Hello') };
-                        </code></pre>
+                        <p>The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.</p>
+                        <pre><code>function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+}</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -134,15 +152,13 @@
                             C#
                         </h3>
                         <p>Basic Class in C#</p>
-                        <pre><code>
-                        public class User
-                        {
-                            public string UUId { get; }
-                            public string Name { get; set; }
-                            public string Email { get; set; }
-                            public List&lt;string&gt; Roles { get; set; }
-                        }
-                        </code></pre>
+                        <pre><code>public class User
+    {
+        public string UUId { get; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public List&lt;string&gt; Roles { get; set; }
+    }</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -150,23 +166,21 @@
                             NestJS
                         </h3>
                         <p>Controller where integrated with Nextjs as frontend</p>
-                        <pre><code>
-                        @Controller()
-                        export class AppController {
-                            constructor(
-                                private readonly next: NextService,
-                                private configService: ConfigService,
-                            ) {}
+                        <pre><code>@Controller()
+export class AppController {
+    constructor(
+        private readonly next: NextService,
+        private configService: ConfigService,
+    ) {}
 
-                            @Get()
-                            public async showHome(
-                                @Req() req: IncomingMessage,
-                                @Res() res: ServerResponse,
-                            ) {
-                                await this.next.render('/index', req, res);
-                            }
-                        }
-                        </code></pre>
+    @Get()
+    public async showHome(
+        @Req() req: IncomingMessage,
+        @Res() res: ServerResponse,
+    ) {
+        await this.next.render('/index', req, res);
+    }
+}</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -174,9 +188,7 @@
                             Postgresql
                         </h3>
                         <p>Creating Index to search through email faster.</p>
-                        <pre><code>
-                        CREATE INDEX idx_users_email_lower ON users (LOWER(email)); 
-                        </code></pre>
+                        <pre><code>CREATE INDEX idx_users_email_lower ON users (LOWER(email));</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -184,14 +196,12 @@
                             MongoDB
                         </h3>
                         <p>Mongodb work with collections.</p>
-                        <pre><code>
-                        db.articles.find({
-                        $or: [
-                            { author: "Aditya", level: "basic" },
-                            { author: "Rakesh", level: "medium" }
-                        ]
-                        })
-                        </code></pre>
+                        <pre><code>db.articles.find({
+    $or: [
+        { author: "Aditya", level: "basic" },
+        { author: "Rakesh", level: "medium" }
+    ]
+}) </code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -199,9 +209,7 @@
                             Redis
                         </h3>
                         <p>Caching the product status in ERP in memory.</p>
-                        <pre><code>
-                        await client.set(`${product_id}stat:`, ProductStatus.CANCELLED);
-                        </code></pre>
+                        <pre><code>await client.set(`${product_id}stat:`, ProductStatus.CANCELLED);</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -209,9 +217,7 @@
                             MySQL
                         </h3>
                         <p>All fields from specific Id of user.</p>
-                        <pre><code>
-                        SELECT * FROM users WHERE id = 1;
-                        </code></pre>
+                        <pre><code>SELECT * FROM users WHERE id = 1;</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -219,15 +225,13 @@
                             CSS
                         </h3>
                         <p>Style for pre tag;</p>
-                        <pre><code>
-                        pre {
-                            background: #272822;
-                            color: #f8f8f2;
-                            padding: 10px;
-                            border-radius: 5px;
-                            overflow-x: auto;
-                        }
-                        </code></pre>
+                        <pre><code>pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -235,9 +239,7 @@
                             HTML
                         </h3>
                         <p></p>
-                        <pre><code>
-                        &lt;h1&gt;Hello&lt;/h1&gt;
-                        </code></pre>
+                        <pre><code>&lt;h1&gt;Hello&lt;/h1&gt;</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -245,9 +247,7 @@
                             Git
                         </h3>
                         <p>Creating and switching to new branch with the name gh-pages;</p>
-                        <pre><code>
-                        git checkout -b gh-pages
-                        </code></pre>
+                        <pre><code>git checkout -b gh-pages</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -255,18 +255,16 @@
                             NodeJS
                         </h3>
                         <p>Creating server in nodejs environment.</p>
-                        <pre><code>
-                        const http = require('http');
+                        <pre><code>const http = require('http');
 
-                        const server = http.createServer((req, res) => {
-                        res.writeHead(200, { 'Content-Type': 'text/plain' });
-                        res.end('Hello from Node.js!');
-                        });
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello from Node.js!');
+});
 
-                        server.listen(3000, () => {
-                        console.log('Server is running on port 3000');
-                        });
-                        </code></pre>
+server.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -274,45 +272,41 @@
                             Docker
                         </h3>
                         <p>Simple container build for dev env.</p>
-                        <pre><code>
-                        FROM node:12.13-alpine As development
+                        <pre><code>FROM node:12.13-alpine As development
 
-                        WORKDIR /wg-gateway-admin-panel/src/app
+WORKDIR /wg-gateway-admin-panel/src/app
 
-                        COPY package*.json ./
+COPY package*.json ./
 
-                        RUN npm install --only=development
+RUN npm install --only=development
 
-                        COPY . .
+COPY . .
 
-                        RUN npm run build
-                        </code></pre>
+RUN npm run build</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
                             <img src="./svg/dotnet.svg" alt="Net logo">
                             .NET
                         </h3>
-                        <p></p>
-                        <pre>Simple UserProfile class.<code>
-                        using System;
-                        using System.Collections.Generic;
+                        <p>Simple UserProfile class.</p>
+                        <pre><code>using System;
+using System.Collections.Generic;
 
-                        namespace MyApp
-                        {
-                            public class UserProfile
-                            {
-                                public Guid Id { get; set; }
-                                public string Username { get; set; }
-                                public List&lt;string&gt; Permissions { get; set; }
+namespace MyApp
+{
+    public class UserProfile
+    {
+        public Guid Id { get; set; }
+        public string Username { get; set; }
+        public List&lt;string&gt; Permissions { get; set; }
 
-                                public void DisplayInfo()
-                                {
-                                    Console.WriteLine($"User: {Username}");
-                                }
-                            }
-                        }
-                        </code></pre>
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"User: {Username}");
+        }
+    }
+}</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
@@ -320,91 +314,82 @@
                             Nginx
                         </h3>
                         <p>Server port and location.</p>
-                        <pre><code>
-                        server {
-                            listen 80;
-                            server_name mycv.com;
+                        <pre><code>server {
+    listen 80;
+    server_name mycv.com;
 
-                            location / {
-                                root /var/www/html;
-                                index index.html;
-                            }
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
 
-                            location /api {
-                                proxy_pass http://localhost:5000;
-                                proxy_http_version 1.1;
-                                proxy_set_header Upgrade $http_upgrade;
-                                proxy_set_header Connection keep-alive;
-                                proxy_set_header Host $host;
-                                proxy_cache_bypass $http_upgrade;
-                            }
-                        }
-                        </code></pre>
+    location /api {
+        proxy_pass http://localhost:5000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection keep-alive;
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>
                             <img src="./svg/stripe.svg" alt="Stripe logo">
                             Stripe
                         </h3>
-                        <pre><code>
-                        const stripe = require('stripe')('sk_test_51P...');
-                        await stripe.checkout.session.create({
-                            line_items: [
-                                {
-                                    price_data: {
-                                    currency: 'usd',
-                                    product_data: {
-                                        name: 'T-shirt',
-                                    },
-                                    unit_amount: 2000,
-                                    },
-                                    quantity: 1,
-                                },
-                            ],
-                            mode: 'payment',
-                            success_url: 'https://example.com/success',
-                            cancel_url: 'https://example.com/cancel',
-                        })
-                        </code></pre>
+                        <pre><code>const stripe = require('stripe')('sk_test_51P...');
+await stripe.checkout.session.create({
+    line_items: [
+        {
+            price_data: {
+                currency: 'usd',
+                product_data: {
+                    name: 'T-shirt',
+                },
+                unit_amount: 2000,
+            },
+            quantity: 1,
+        },
+    ],
+    mode: 'payment',
+    success_url: 'https://example.com/success',
+    cancel_url: 'https://example.com/cancel',
+})</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>Express.js</h3>
                         <p>Server app.</p>
-                        <pre><code>
-                        const express = require('express');
-                        const app = express();
-                        </code></pre>
+                        <pre><code>const express = require('express');
+const app = express();</code></pre>
                     </div>
                     <div class="skill-tag-card">
                         <h3>ORM</h3>
                         <p></p>
-                        <pre><code>
-                        import { Entity, PrimaryGeneratedColumn, Column, ArrayContains } from "typeorm";
+                        <pre><code>import { Entity, PrimaryGeneratedColumn, Column, ArrayContains } from "typeorm";
 
-                        @Entity()
-                        export class User {
-                            @PrimaryGeneratedColumn()
-                            id: number;
+@Entity()
+xport class User {
+    @PrimaryGeneratedColumn()
+    id: number;
 
-                            @Column()
-                            firstName: string;
+    @Column()
+    firstName: string;
 
-                            @Column()
-                            lastName: string;
+    @Column()
+    lastName: string;
 
-                            @Column("simple-array")
-                            roles: string[];
-                        }
+    @Column("simple-array")
+    roles: string[];
+}
 
-                        // Пример сохранения (Data Source)
-                        const userRepository = AppDataSource.getRepository(User);
-                        const user = new User();
-                        user.firstName = "Timber";
-                        user.lastName = "Saw";
-                        user.roles = ["admin", "editor"];
+const userRepository = AppDataSource.getRepository(User);
+const user = new User();
+user.firstName = "Akhmad";
+user.lastName = "Badalov";
+user.roles = ["admin", "editor"];
 
-                        await userRepository.save(user);
-                        </code></pre>
+await userRepository.save(user);</code></pre>
                     </div>
                 </div>
             </section>
