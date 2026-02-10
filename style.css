@@ -147,10 +147,33 @@ article ul li {
     border-bottom: 1px dashed #ccc;
 }
 
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
+footer {
+    margin-top: 50px;
+    padding: 30px 40px;
+    border-top: 1px solid #eee;
+    background-color: #fcfcfc;
+}
+
+footer div {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer div a {
+    color: #636e72;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    gap: 8px;
+}
+
+footer div a:hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
 }
 
 @media print {
@@ -162,9 +185,23 @@ article ul li {
     .skill-tag-card {
         break-inside: avoid;
     }
+
+    footer {
+        border-top: none;
+        padding-top: 10px;
+    }
+
+    footer div a {
+        color: #000;
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
     header {
         grid-template-columns: 1fr;
         text-align: center;
