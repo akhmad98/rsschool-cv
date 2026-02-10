@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <figure class="profile-pic">
+            <img src="img.jpeg" alt="Akhmad Badalov - Profile picture">
+        </figure>
+        <div>
+            <h1>Akhmad Badalov Abdurshid o'g'li</h1>
+            <p class="job-title">Full-stack developer</p>
+            <nav>
+                <ul class="contacts">
+                    <li>Email: <a href="mailto:akhmadbadalov98@gmail.com">akhmadbadalov98@gmail.com</a></li>
+                    <li>Phone number: <a href="tel:+998337529713">+998337529713</a></li>
+                    <li>Address: Tashkent. Uzbekistan</li>
+                    <li>Social addresses:
+                        <a href="https://github.com/akhmad98">Github</a>
+                        <a href="https://www.linkedin.com/in/akhmad-badalov-928966211">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-col">
+            <section class="job-headline">
+                <h2>I am full-stack developer (NodeJS). I have gained commercial experience as full-stack and backend developer.</h2>
+            </section>
+
+            <section class="experience">
+                <h2>Experiences</h2>
+                <article>
+                    <h3>Data analyst - <b>Volunteer project</b></h3>
+                    <p class="duration">June 2021 - September 2021</p>
+                    <ul>
+                        <li>Web Scrapping using beatifulsoup.</li>
+                        <li>Develop chatbot in national language.</li>
+                        <li>Text-To-Speech, Speech-To-Text</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Full-stack Developer - <b>Prime Media Solution</b></h3>
+                    <p class="duration">September 2021 - May 2022</p>
+                    <ul>
+                        <li>Developing frontend of the project using Next.js - React framework.</li>
+                        <li>Establashing backend using Nest.js framework</li>
+                        <li>Working with NoSQL database (MongoDB).</li>
+                        <li>Connecting with ORM - TypeORM.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Backend Developer - <b>TTELD</b> Eld device management.</h3>
+                    <p class="duration">August 2022 - July 2023</p>
+                    <ul>
+                        <li>Working with Caching - Redis.</li>
+                        <li>Projecting in production environment - PM2</li>
+                        <li>Migration to TypeScript.</li>
+                        <li>Fixing bugs from written code in Loopback framework.</li>
+                        <li>Adding features of Stripe payment technology.</li>
+                        <li>Optimizing Postgresql, indexing fields, database sharding and partitioning.</li>
+                        <li>Integration Queue technology - RabbitMQ.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Sales Manager - <b>Tashkent pipe plant</b></h3>
+                    <p class="duration">July 2023 - Currently</p>
+                    <ul>
+                        <li>Optimizing Marketing and Management.</li>
+                        <li>Increasing Sales.</li>
+                        <li>Decreasing unnecessary spendings.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <article class="univer">
+                    <h3>Management Development Institute of Singapore in Tashkent.</h3>
+                    <p><strong>Bachelor of Science</strong> in Computer Information Systems for Businses.</p>
+                    <p>
+                        <time datetime="2018">2018</time> - <time datetime="2021">2021</time>
+                    </p>
+                </article>
+                <article class="course">
+                    <h3>Onile Course of Advanced .Net.</h3>
+                    <p>Epam Online course.</p>
+                    <p>
+                        <time datetime="2022">2022</time>
+                    </p>
+                </article>
+                <article class="projects">
+                    <h3>Deployed Projects.</h3>
+                    <p>TTELD.com</p>
+                    <p>..</p>
+                </article>
+            </section>
+        </div>
+
+        <aside class="side-col">
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="skill-tags">
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/typescript.svg" alt="TypeScript logo">
+                            TypeScript
+                        </h3>
+                        <p>Returns true if there is a cycle in the linked list. Otherwise, return false.</p>
+                        <pre><code>function hasCycle(head: ListNode | null): boolean {
+    if (!head || !head.next) {
+        return false
+    }
+
+    let tort: ListNode | null = head;
+    let rabb: ListNode | null = head.next;
+    while (tort && rabb && rabb.next) {
+        if (tort == rabb) {
+            return true
+        }
+        tort = tort.next;
+        rabb = rabb.next.next;
+    }
+    return false
+};</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/javascript.svg" alt="JavaScript logo">
+                            JavaScript
+                        </h3>
+                        <p>The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.</p>
+                        <pre><code>function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+}</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/csharp.svg" alt="C# logo">
+                            C#
+                        </h3>
+                        <p>Basic Class in C#</p>
+                        <pre><code>public class User
+    {
+        public string UUId { get; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public List&lt;string&gt; Roles { get; set; }
+    }</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/nestjs.svg" alt="NestJS logo">
+                            NestJS
+                        </h3>
+                        <p>Controller where integrated with Nextjs as frontend</p>
+                        <pre><code>@Controller()
+export class AppController {
+    constructor(
+        private readonly next: NextService,
+        private configService: ConfigService,
+    ) {}
+
+    @Get()
+    public async showHome(
+        @Req() req: IncomingMessage,
+        @Res() res: ServerResponse,
+    ) {
+        await this.next.render('/index', req, res);
+    }
+}</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/postgresql.svg" alt="Postgresql logo">
+                            Postgresql
+                        </h3>
+                        <p>Creating Index to search through email faster.</p>
+                        <pre><code>CREATE INDEX idx_users_email_lower ON users (LOWER(email));</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/mongodb.svg" alt="MongoDB logo">
+                            MongoDB
+                        </h3>
+                        <p>Mongodb work with collections.</p>
+                        <pre><code>db.articles.find({
+    $or: [
+        { author: "Aditya", level: "basic" },
+        { author: "Rakesh", level: "medium" }
+    ]
+}) </code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/redis.svg" alt="Redis logo">
+                            Redis
+                        </h3>
+                        <p>Caching the product status in ERP in memory.</p>
+                        <pre><code>await client.set(`${product_id}stat:`, ProductStatus.CANCELLED);</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/mysql.svg" alt="MySQL logo">
+                            MySQL
+                        </h3>
+                        <p>All fields from specific Id of user.</p>
+                        <pre><code>SELECT * FROM users WHERE id = 1;</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/css.svg" alt="CSS logo">
+                            CSS
+                        </h3>
+                        <p>Style for pre tag;</p>
+                        <pre><code>pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/html.svg" alt="HTML logo">
+                            HTML
+                        </h3>
+                        <p></p>
+                        <pre><code>&lt;h1&gt;Hello&lt;/h1&gt;</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/git.svg" alt="Git logo">
+                            Git
+                        </h3>
+                        <p>Creating and switching to new branch with the name gh-pages;</p>
+                        <pre><code>git checkout -b gh-pages</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/nodejs.svg" alt="NodeJS logo">
+                            NodeJS
+                        </h3>
+                        <p>Creating server in nodejs environment.</p>
+                        <pre><code>const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello from Node.js!');
+});
+
+server.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/docker.svg" alt="Docker logo">
+                            Docker
+                        </h3>
+                        <p>Simple container build for dev env.</p>
+                        <pre><code>FROM node:12.13-alpine As development
+
+WORKDIR /wg-gateway-admin-panel/src/app
+
+COPY package*.json ./
+
+RUN npm install --only=development
+
+COPY . .
+
+RUN npm run build</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/dotnet.svg" alt="Net logo">
+                            .NET
+                        </h3>
+                        <p>Simple UserProfile class.</p>
+                        <pre><code>using System;
+using System.Collections.Generic;
+
+namespace MyApp
+{
+    public class UserProfile
+    {
+        public Guid Id { get; set; }
+        public string Username { get; set; }
+        public List&lt;string&gt; Permissions { get; set; }
+
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"User: {Username}");
+        }
+    }
+}</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/nginx.svg" alt="Nginx logo">
+                            Nginx
+                        </h3>
+                        <p>Server port and location.</p>
+                        <pre><code>server {
+    listen 80;
+    server_name mycv.com;
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+
+    location /api {
+        proxy_pass http://localhost:5000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection keep-alive;
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>
+                            <img src="./svg/stripe.svg" alt="Stripe logo">
+                            Stripe
+                        </h3>
+                        <pre><code>const stripe = require('stripe')('sk_test_51P...');
+await stripe.checkout.session.create({
+    line_items: [
+        {
+            price_data: {
+                currency: 'usd',
+                product_data: {
+                    name: 'T-shirt',
+                },
+                unit_amount: 2000,
+            },
+            quantity: 1,
+        },
+    ],
+    mode: 'payment',
+    success_url: 'https://example.com/success',
+    cancel_url: 'https://example.com/cancel',
+})</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>Express.js</h3>
+                        <p>Server app.</p>
+                        <pre><code>const express = require('express');
+const app = express();</code></pre>
+                    </div>
+                    <div class="skill-tag-card">
+                        <h3>ORM</h3>
+                        <p></p>
+                        <pre><code>import { Entity, PrimaryGeneratedColumn, Column, ArrayContains } from "typeorm";
+
+@Entity()
+xport class User {
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column()
+    firstName: string;
+
+    @Column()
+    lastName: string;
+
+    @Column("simple-array")
+    roles: string[];
+}
+
+const userRepository = AppDataSource.getRepository(User);
+const user = new User();
+user.firstName = "Akhmad";
+user.lastName = "Badalov";
+user.roles = ["admin", "editor"];
+
+await userRepository.save(user);</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="language">
+                <h2>Languages</h2>
+                <ul class="language-ul">
+                    <li class="language-list">
+                        <strong>English</strong>
+                        <span>C1 (Upper-Intermediate)</span>
+                    </li>
+                    <li class="language-list">
+                        <strong>Russian</strong>
+                        <span>B1 (Pre-Intermediate)</span>
+                    </li>
+                    <li class="language-list">
+                        <strong>Uzbek</strong>
+                        <span>C2 (Advanced)</span>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footer-link">
+            <a href="https://github.com/akhmad98">GitHub</a>
+        </div>
+        <div class="footer-text">
+            Made in: 2026
+        </div>
+        <div class="rs-logo">
+             <img src="https://rs.school/_next/static/media/rss-logo.c19ce1b4.svg" alt="RSSchool Logo">
+        </div>
+        <div class="link-to-course">
+            <a href="https://rs.school/courses/short-track">RS School Course</a>
+        </div>
+    </footer>
+</body>
+</html>
