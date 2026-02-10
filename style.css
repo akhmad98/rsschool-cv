@@ -187,6 +187,10 @@ footer div a:hover {
     text-decoration: underline;
 }
 
+footer div img {
+    width: 80px;
+}
+
 @media print {
     main {
         display: block;
