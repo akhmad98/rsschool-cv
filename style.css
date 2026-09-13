@@ -1,1 +1,31 @@
-. {}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --primary-dark: #2d3436;
+  --accent-blue: #0984e3;
+  --bg-light: #f9f9f9;
+  --text-main: #444;
+  --primary-light: #636e72;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: center;
+    background: var(--bg-light);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding: 40px;
+}
+
+.profile-info figure img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    object-fit: cover;
+}
