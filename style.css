@@ -337,6 +337,12 @@ footer div img {
     .language {
         text-align: center !important;
     }
+
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: pre;
+    }
 }
 
 @media (max-width: 640px) {
